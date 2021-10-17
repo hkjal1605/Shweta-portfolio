@@ -26,7 +26,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  &__projects-page {
+  &__architect-page {
     position: absolute;
     &--shown {
       animation: scale-in-enter 0.8s ease both;
@@ -62,18 +62,37 @@
   width: 100vw;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(
+
+  &__bg-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  &__video-cover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-image: linear-gradient(
       to right bottom,
       rgba(250, 159, 181, 0.5),
       rgba(247, 104, 161, 0.5),
       rgba(221, 52, 151, 0.5),
       rgba(174, 1, 126, 0.5),
       rgba(122, 1, 119, 0.5)
-    ),
-    url("../../images/bg.webp");
-
-  background-position: top;
-  background-size: cover;
+    );
+  }
 
   &__animated {
     -webkit-animation: slide-in-fwd-left 0.8s ease both;
@@ -130,16 +149,16 @@
       color: transparent;
       background-image: linear-gradient(
         to bottom,
-        rgba(#fbafc1, 0.5),
-        rgba(#f76f90, 0.8)
+        rgba(#fbafc1, 0.7),
+        rgba(#f76f90, 0.9)
       );
-      -webkit-text-stroke-width: 0.3px;
+      -webkit-text-stroke-width: 0.6px;
       -webkit-text-stroke-color: #32030e;
     }
 
     &--3 {
       font-family: "Architects Daughter", cursive;
-      font-size: 4rem;
+      font-size: 3.5rem;
       letter-spacing: 1px;
       color: #fde0e7;
     }
@@ -150,7 +169,7 @@
       font-family: "Lato", sans-serif;
       font-size: 1.8rem;
       letter-spacing: 1.5px;
-      color: #dd3497;
+      color: #f30c93;
 
       @media only screen and (max-width: 50em) {
         font-size: 2.5rem;
@@ -171,7 +190,7 @@
   &__icon {
     height: 5rem;
     width: 5rem;
-    fill: #dd3497;
+    fill: #f30c93;
     transition: all 0.5s;
 
     &:hover {
@@ -183,15 +202,66 @@
     animation: scale-out-exit 0.8s ease both;
   }
 
-  &__projects-btn {
+  &__btn-1 {
     cursor: pointer;
     position: absolute;
-    right: -0.5rem;
-    top: 10rem;
+    right: -2.5rem;
+    top: 12rem;
     transform: rotateZ(270deg);
     z-index: 500;
     font-family: "Lato", sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #fff2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-2 {
+    cursor: pointer;
+    position: absolute;
+    right: -0.5rem;
+    top: 26rem;
+    transform: rotateZ(270deg);
+    z-index: 500;
+    font-family: "Lato", sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #fff2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-3 {
+    cursor: pointer;
+    position: absolute;
+    right: 1.6rem;
+    top: 35rem;
+    transform: rotateZ(270deg);
+    z-index: 500;
+    font-family: "Lato", sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #fff2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-4 {
+    cursor: pointer;
+    position: absolute;
+    right: -0.4rem;
+    top: 45rem;
+    transform: rotateZ(270deg);
+    z-index: 500;
+    font-family: "Lato", sans-serif;
+    font-size: 1.8rem;
     text-transform: uppercase;
     color: #fff2ff;
     display: flex;
@@ -203,12 +273,12 @@
   &__about-btn {
     cursor: pointer;
     position: absolute;
-    right: 0.7rem;
-    top: 20rem;
+    right: 1rem;
+    top: 55rem;
     transform: rotateZ(270deg);
     z-index: 500;
     font-family: "Lato", sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     color: #fff2ff;
     display: flex;
@@ -226,11 +296,11 @@
     font-weight: 300;
     font-size: 2rem;
     letter-spacing: 1px;
-    color: #fff;
+    color: #faa4d6;
 
     &--email-link {
       text-decoration: none;
-      color: rgba(122, 1, 119, 1);
+      color: #fff;
       font-family: "Architects Daughter", cursive;
     }
   }

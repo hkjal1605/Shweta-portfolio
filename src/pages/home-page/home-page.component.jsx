@@ -7,7 +7,8 @@ import { ReactComponent as Facebook } from "../../images/facebook.svg";
 import { ReactComponent as Instagram } from "../../images/instagram.svg";
 import { ReactComponent as Github } from "../../images/github-1.svg";
 import { ReactComponent as Linkedin } from "../../images/linkedin.svg";
-import ProjectsPage from "../projects-page/projects-page.component";
+import bgVideo from "../../images/Construction Site - 73470.mp4";
+import ArchitectPage from "../architect-page/architect-page.component";
 import AboutPage from "../about-page/about-page.component";
 
 class HomePage extends React.Component {
@@ -18,7 +19,7 @@ class HomePage extends React.Component {
     this.handler2 = this.handler2.bind(this);
 
     this.state = {
-      projectsPage: false,
+      architectPage: false,
       aboutPage: false,
       initialLoad: true,
       lastPage: undefined,
@@ -27,9 +28,9 @@ class HomePage extends React.Component {
 
   handler1() {
     this.setState({
-      projectsPage: false,
+      architectPage: false,
       initialLoad: false,
-      lastPage: "projectsPage",
+      lastPage: "architectPage",
     });
   }
 
@@ -43,7 +44,7 @@ class HomePage extends React.Component {
 
   handleProjectsClick = () => {
     this.setState({
-      projectsPage: true,
+      architectPage: true,
       initialLoad: false,
       lastPage: undefined,
     });
@@ -54,18 +55,22 @@ class HomePage extends React.Component {
   };
 
   render() {
-    const { projectsPage, initialLoad, aboutPage, lastPage } = this.state;
+    const { architectPage, initialLoad, aboutPage, lastPage } = this.state;
     return (
       <div className="app">
         <div
           className={
             initialLoad
               ? "home-page"
-              : !projectsPage && !aboutPage
+              : !architectPage && !aboutPage
               ? "home-page home-page__animated"
               : "home-page home-page__hidden"
           }
         >
+          <video autoPlay loop muted className="home-page__bg-video">
+            <source src={bgVideo} type="video/mp4"></source>
+          </video>
+          <div className="home-page__video-cover" />
           <div className="custom-shape-divider-bottom-1603420290">
             <svg
               data-name="Layer 1"
@@ -91,40 +96,34 @@ class HomePage extends React.Component {
           </div>
           <div className="home-page__content">
             <h4 className="home-page__content--1">Hi. I am</h4>
-            <h4 className="home-page__content--2">HARSH KUMAR JHA</h4>
+            <h4 className="home-page__content--2">SHWETA KUMARI</h4>
 
             <h6 className="home-page__content--3">
-              And I love turning websites to life!
+              And I work on crazy designs for homes and apps!
             </h6>
             <p className="home-page__content--4">
-              And if you are dreaming about the background and why I put it
-              there, it's a place from one of the games I love playing. If you
-              love it too, or want to take your work online, do contact me!
+              Zealous Architect, Interior and UI/UX Designer with the vision of
+              creating things no one plans to have ever existed. Want a design
+              for your new construction, or want to have an app/website design
+              for your business, do contact me!
             </p>
             <div className="home-page__content--contact">
               <a
-                href="https://www.facebook.com/profile.php?id=100009396904890"
+                href="https://www.facebook.com/bitty.kumari.3785"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Facebook className="home-page__icon" />
               </a>
               <a
-                href="https://www.instagram.com/harsh.hkj/"
+                href="https://www.instagram.com/kwetashumari/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Instagram className="home-page__icon" />
               </a>
               <a
-                href="https://github.com/hkjal1605"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="home-page__icon" />
-              </a>
-              <a
-                href="www.linkedin.com/in/harsh-kumar-jha-6a3360194"
+                href="https://www.linkedin.com/in/shweta-kumari-908794146/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -135,27 +134,34 @@ class HomePage extends React.Component {
           <div>
             <Blob className="home-page__blob" />
           </div>
-          <div
-            onClick={this.handleProjectsClick}
-            className="home-page__projects-btn"
-          >
-            <h4>Projects</h4>
-
+          <div onClick={this.handleProjectsClick} className="home-page__btn-1">
+            <h4>Architecture</h4>
+            <span style={{ fontWeight: 700, fontSize: "3rem" }}>&#8744;</span>
+          </div>
+          <div onClick={this.handleProjectsClick} className="home-page__btn-2">
+            <h4>Interiors</h4>
+            <span style={{ fontWeight: 700, fontSize: "3rem" }}>&#8744;</span>
+          </div>
+          <div onClick={this.handleProjectsClick} className="home-page__btn-3">
+            <h4>UI/UX</h4>
+            <span style={{ fontWeight: 700, fontSize: "3rem" }}>&#8744;</span>
+          </div>
+          <div onClick={this.handleProjectsClick} className="home-page__btn-4">
+            <h4>Product</h4>
             <span style={{ fontWeight: 700, fontSize: "3rem" }}>&#8744;</span>
           </div>
           <div onClick={this.handleAboutClick} className="home-page__about-btn">
             <h4>About</h4>
-
             <span style={{ fontWeight: 700, fontSize: "3rem" }}>&#8744;</span>
           </div>
           <div className="home-page__contact-info">
             <h4>
               Contact me here:{" "}
               <a
-                href="mailto:hkjal1605@gmail.com"
+                href="mailto:kumarishweta.email@gmail.com"
                 className="home-page__contact-info--email-link"
               >
-                hkjal1605@gmail.com
+                kumarishweta.email@gmail.com
               </a>
             </h4>
           </div>
@@ -165,17 +171,17 @@ class HomePage extends React.Component {
             <div
               className={
                 initialLoad
-                  ? "app__projects-page"
-                  : projectsPage
-                  ? "app__projects-page app__projects-page--shown"
-                  : "app__projects-page app__projects-page--hidden"
+                  ? "app__architect-page"
+                  : architectPage
+                  ? "app__architect-page app__architect-page--shown"
+                  : "app__architect-page app__architect-page--hidden"
               }
             >
-              <ProjectsPage handler={this.handler1} />
+              <ArchitectPage handler={this.handler1} />
             </div>
           ) : null}
 
-          {!projectsPage && lastPage !== "projectsPage" ? (
+          {!architectPage && lastPage !== "architectPage" ? (
             <div
               className={
                 initialLoad

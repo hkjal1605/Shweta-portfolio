@@ -15,18 +15,13 @@ const AboutPage = ({ handler }) => {
           alt="Me"
         />
         <p className="about-page__content">
-          I am Harsh Kumar Jha, a second year undergraduate student at Indian
-          Institute of Technology, Kharagpur in the department of Electrical
-          Engineering.
+          I am Shweta Kumari, an architect graduated from University Of Mumbai.
           <br />
-          <br /> I started my journey of web development in my first year. When
-          I started learning, I didn't even have the knowledge of HTML Tags or
-          CSS. I satarted with the very basics of HTML and Javascript and since
-          then, I have come a long way. Now I know how to play with React, Vue,
-          Firebase, Nodejs, Mongodb, Express and have used them in developing
-          some beautiful websites, which you can find in the projects section.
-          These few months of developing websites have made me fall in love with
-          web development.
+          <br /> Experienced in heading graphic and communication design teams.
+          Skilled in Autocad, Photoshop, Rhino, Revit, Sketchup, Lumion, Enscape
+          and Illustrator. I love to design user experiences through spaces or
+          apps. Art therapy is my passion and I love to help people express
+          themselves through art.
           <br />
           <br />
           <br />
@@ -35,9 +30,8 @@ const AboutPage = ({ handler }) => {
             Want to work with me? Do contact me.
             <br />
             <br />
-            Email: <u>hkjal1605@gmail.com</u>
+            Email: <u>kumarishweta.email@gmail.com</u>
             <br />
-            Phone/Whatsapp: <u>+91-8986623661</u>
           </span>
         </p>
       </div>
