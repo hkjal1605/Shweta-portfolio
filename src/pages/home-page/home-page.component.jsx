@@ -5,7 +5,6 @@ import "./home-page.styles.scss";
 import { ReactComponent as Blob } from "../../images/blob.svg";
 import { ReactComponent as Facebook } from "../../images/facebook.svg";
 import { ReactComponent as Instagram } from "../../images/instagram.svg";
-import { ReactComponent as Github } from "../../images/github-1.svg";
 import { ReactComponent as Linkedin } from "../../images/linkedin.svg";
 import bgVideo from "../../images/Construction Site - 73470.mp4";
 import ArchitectPage from "../architect-page/architect-page.component";
